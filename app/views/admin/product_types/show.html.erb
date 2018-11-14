@@ -1,0 +1,27 @@
+<p id="notice" ><%=notice%>
+</p>
+
+<p>
+    <strong>
+        <%= @product_type.name %>
+    </strong>
+</p>
+
+<p>
+    <strong>
+        <%= link_to @product_type.category.name, admin_category_path(@product_type.category) %> 
+    </strong>
+</p>
+
+
+<p>
+    <strong>
+        Name:
+        <%= @product_type.name %>
+    </strong>
+</p>
+<p>
+    <%=  @product_type.is_active == true ? "Hiện" : "Ẩn" %>
+</p>
+<%= link_to 'Edit', edit_admin_product_type_path(@product_type) %> |
+<%= link_to 'Back', admin_product_type_path %>
